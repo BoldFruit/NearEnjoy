@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="login_min_toolbar_height">36dp</dimen>
+
+    <dimen name="login_normal_margin_start">20dp</dimen>
+    <dimen name="login_normal_margin_end">20dp</dimen>
+    <dimen name="login_normal_layout_margin_top">40dp</dimen>
+    <dimen name="login_normal_input_height">40dp</dimen>
+    <dimen name="login_normal_interval_between_input">20dp</dimen>
+    <dimen name="login_min_margin">4dp</dimen>
+    <dimen name="login_min_margin_2">8dp</dimen>
+    <dimen name="login_min_margin_3">12dp</dimen>
+
+    <dimen name="login_min_txt_size">12sp</dimen>
+
+</resources>

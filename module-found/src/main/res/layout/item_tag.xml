@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tag"
+        android:gravity="center"
+        android:paddingEnd="@dimen/p2"
+        android:paddingStart="@dimen/p2"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="@dimen/p2"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标签"
+            android:textSize="12sp"
+            android:textColor="@color/txt_tag_gray"
+            android:id="@+id/txt_tag_name"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxEms="16"/>
+        
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_delete"
+            android:layout_marginStart="2dp"
+            android:id="@+id/img_delete"
+            android:visibility="gone"
+     />
+
+    </LinearLayout>
+</layout>

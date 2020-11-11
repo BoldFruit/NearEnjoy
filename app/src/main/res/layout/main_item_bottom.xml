@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp">
+
+        <View
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:background="@drawable/main_bg_dash"
+            android:layout_toStartOf="@+id/txt_bottom"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="4dp"
+            android:id="@+id/left_dot"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_txt_toBottom"
+            android:textColor="#6D7278"
+            android:textSize="16sp"
+            android:id="@+id/txt_bottom"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+
+        <View
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:background="@drawable/main_bg_dash"
+            android:layout_toEndOf="@+id/txt_bottom"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:id="@+id/right_dot"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btn_retry"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/main_bg_dash"
+            android:text="@string/mian_txt_retry"
+            android:textSize="14sp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</layout>

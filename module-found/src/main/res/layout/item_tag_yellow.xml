@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tag_yellow"
+        android:gravity="center"
+        android:paddingEnd="6dp"
+        android:paddingStart="6dp"
+        android:layout_marginEnd="6dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标签"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxEms="5"
+            android:textSize="12sp"
+            android:textColor="@color/bg_tag_yellow"
+            android:id="@+id/txt_tag_name"/>
+    </LinearLayout>
+</layout>

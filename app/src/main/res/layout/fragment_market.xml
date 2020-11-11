@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="eventPresenter"
+            type="com.example.mvvm_simple.view.fragment.MarketFragment.EventPresenter" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"
+        android:background="@color/white"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:clipToPadding="true"
+            android:fitsSystemWindows="true"
+            android:paddingStart="12sp"
+            android:paddingEnd="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:id="@+id/appbar"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                app:layout_scrollFlags="scroll">
+
+                <LinearLayout
+                    android:id="@+id/llayout_search"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="26dp"
+                    android:background="@drawable/bg_search"
+                    android:paddingStart="13dp"
+                    android:paddingEnd="13dp"
+                    android:paddingTop="5.5dp"
+                    android:paddingBottom="5.5dp"
+                    android:gravity="center_vertical"
+                    android:onClick="@{(v) -> eventPresenter.onClick(v)}">
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_market_search"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/txt_principles_of_statistics"
+                        android:textSize="11sp"
+                        android:textColor="#A4A4A4 "/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:id="@+id/llayout_classification"
+                    android:onClick="@{(v) -> eventPresenter.onClick(v)}"
+                    >
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginStart="8dp"
+                        android:scaleType="fitCenter"
+                        android:id="@+id/img_market_classification"
+                        android:src="@drawable/ic_market_classification"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_market_classification"
+                        android:textColor="#8D959F"
+                        android:textSize="11sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.example.lib_common.widget.banner.Banner
+                android:layout_width="match_parent"
+                android:layout_height="94dp"
+                android:id="@+id/banner"
+                android:layout_marginTop="13dp"
+                app:layout_scrollFlags="scroll"
+                app:is_auto_loop="false"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_scrollFlags="scroll">
+                
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/llayout_market_one"
+                    >
+
+                    <ImageView
+                        style="@style/FunctionImageStyle"
+                        android:src="@drawable/ic_market_book"
+                        android:id="@+id/img_market_one"
+                        />
+
+                    <TextView
+                        style="@style/FunctionTxtStyle"
+                        android:text="@string/book"
+                        android:id="@+id/txt_market_one"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/llayout_market_two">
+
+                    <ImageView
+                        style="@style/FunctionImageStyle"
+                        android:id="@+id/img_market_two"
+                        android:src="@drawable/ic_market_play"
+                        />
+
+                    <TextView
+                        style="@style/FunctionTxtStyle"
+                        android:text="@string/img_market_play"
+                        android:id="@+id/txt_market_two"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/llayout_market_three">
+
+                    <ImageView
+                        style="@style/FunctionImageStyle"
+                        android:src="@drawable/ic_market_duck"
+                        android:id="@+id/img_market_three"
+                       />
+                    <TextView
+                        style="@style/FunctionTxtStyle"
+                        android:text="@string/img_market_life"
+                        android:id="@+id/txt_market_three"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/llayout_market_four">
+
+                    <ImageView
+                        style="@style/FunctionImageStyle"
+                        android:id="@+id/img_market_four"
+                        android:src="@drawable/ic_market_skill"
+                        />
+
+                    <TextView
+                        style="@style/FunctionTxtStyle"
+                        android:text="@string/img_market_skill"
+                        android:id="@+id/txt_market_four"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/llayout_market_five">
+
+                    <ImageView
+                        style="@style/FunctionImageStyle"
+                        android:src="@drawable/ic_market_other"
+                        android:id="@+id/img_market_five"
+                        />
+
+                    <TextView
+                        style="@style/FunctionTxtStyle"
+                        android:text="@string/txt_market_other"
+                        android:id="@+id/txt_market_five"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_desire"
+                android:scaleType="centerCrop"
+                app:layout_scrollFlags="scroll"
+                android:id="@+id/img_market_desire"
+                android:onClick="@{(v) -> eventPresenter.onClick(v)}"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:id="@+id/tlayout"
+                android:layout_marginTop="6.33dp"
+                android:layout_marginBottom="6.33dp"
+                app:tabIndicatorGravity="bottom"
+                app:tabMode="fixed"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="#F7B500 "
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="2dp"
+                app:tabInlineLabel="false"
+                app:tabTextAppearance="@style/TabLayoutTextStyle"
+                app:tabSelectedTextColor="#F7B500"
+                app:tabTextColor="#6D7278 "
+                />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:background="#EBEBEB"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_market_rocket"
+            app:fabSize="mini"
+            app:borderWidth="0dp"
+            android:layout_marginBottom="15dp"
+            app:layout_anchor="@id/pager"
+            app:layout_anchorGravity="bottom|end"
+            android:layout_marginEnd="15dp"
+            android:scaleType="centerInside"
+            app:maxImageSize="40dp"
+            app:backgroundTint="@color/main_bg_tag_yellow"
+            android:onClick="@{(v) -> eventPresenter.onClick(v)}"
+            android:alpha="0"
+            android:clickable="false"
+            />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:chat="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_marginEnd="8dp"
+            android:id="@+id/receive_img_avatar"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginStart="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <com.example.module_chat.chatbubble.ChatView
+            android:layout_toEndOf="@id/receive_img_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="15dp"
+            android:paddingRight="10dp"
+            chat:arrow_direction="left"
+            chat:arrow_up_distance = "14dp"
+            chat:arrow_width = "5dp"
+            chat:arrow_height = "12dp"
+            chat:stroke_width = "1dp"
+            chat:is_arrow_center="false"
+            chat:stroke_color = "#CCCCCC"
+            chat:fill_color = "#FFFFFF"
+            chat:press_stroke_color = "#50111111"
+            chat:press_fill_color = "#50111111"
+            chat:conner_radius = "6dp">
+
+
+            <ImageView
+                android:src="@drawable/ic_launcher_background"
+                android:maxWidth="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </com.example.module_chat.chatbubble.ChatView>
+
+    </RelativeLayout>
+
+</layout>

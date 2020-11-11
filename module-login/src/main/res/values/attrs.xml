@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RelativeButton">
+        <attr name="normal_btn" format="reference|color"/>
+        <attr name="enable_btn" format="reference|color"/>
+        <attr name="normal_txt" format="reference|color"/>
+        <attr name="enable_txt" format="reference|color"/>
+        <attr name="center_txt" format="string"/>
+    </declare-styleable>
+</resources>

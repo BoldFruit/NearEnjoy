@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <RelativeLayout
+      android:layout_centerInParent="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+      <RelativeLayout
+          android:layout_centerVertical="true"
+          android:id="@+id/checkPoint"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+          <com.example.lib_common.view.EasyRoundView
+              android:id="@+id/layout_select_point_edge"
+              android:layout_centerInParent="true"
+              app:background_color="@color/cardview_dark_background"
+              app:circle_center_x="8dp"
+              app:circle_center_y="8dp"
+              app:circle_radius="8dp"
+              android:layout_width="16dp"
+              android:layout_height="16dp"/>
+
+          <com.example.lib_common.view.EasyRoundView
+              android:id="@+id/layout_select_point_background"
+              android:layout_centerInParent="true"
+              app:background_color="@color/white"
+              app:circle_center_x="7dp"
+              app:circle_center_y="7dp"
+              app:circle_radius="7dp"
+              android:layout_width="14dp"
+              android:layout_height="14dp"/>
+
+          <com.example.lib_common.view.EasyRoundView
+              android:id="@+id/layout_normal_point"
+              android:layout_centerInParent="true"
+              app:circle_center_x="6dp"
+              app:circle_center_y="6dp"
+              app:circle_radius="6dp"
+              android:layout_width="12dp"
+              android:layout_height="12dp"/>
+          <View
+              android:visibility="gone"
+              android:id="@+id/layout_select_point_view"
+              android:layout_centerInParent="true"
+              android:background="@drawable/common_bg_check_point_selected"
+              android:layout_width="12dp"
+              android:layout_height="12dp"/>
+
+      </RelativeLayout>
+      <TextView
+          android:id="@+id/layout_select_point_txt_content"
+          android:layout_marginLeft="4dp"
+          android:layout_toEndOf="@+id/checkPoint"
+          android:text="城市广场"
+          android:layout_centerVertical="true"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+
+  </RelativeLayout>
+</RelativeLayout>

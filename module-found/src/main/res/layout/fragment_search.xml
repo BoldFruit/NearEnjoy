@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="listener"
+            type="com.example.found.view.fragment.SearchFragment.Listener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/p4"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="@dimen/p3"
+        android:id="@+id/root">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                style="@style/icon_porerty"
+                android:layout_marginEnd="@dimen/p2"
+                android:src="@drawable/ic_clock"/>
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/search_history"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+            
+            <ImageView
+                style="@style/icon_porerty"
+                android:src="@drawable/ic_garbage"
+                android:id="@+id/img_clear"
+                android:onClick="@{(v) -> listener.onClick(v)}"/>
+        </LinearLayout>
+
+        <com.example.lib_common.widget.flowlayout.TagFlowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/p3"
+            android:layout_marginBottom="@dimen/p2"
+            android:id="@+id/tlayout_search_history"
+            android:layout_marginEnd="80dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                style="@style/icon_porerty"
+                android:layout_marginEnd="@dimen/p2"
+                android:src="@drawable/ic_change_search_way"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_change_searchway"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_tag"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/p3"
+            android:layout_marginBottom="@dimen/p4"
+            android:paddingEnd="@dimen/p2"
+            android:paddingStart="@dimen/p2"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:id="@+id/llayout_change_search_way"
+            android:onClick="@{(v) -> listener.onClick(v)}"
+            >
+
+            <ImageView
+                style="@style/icon_porerty"
+                android:src="@drawable/ic_user"
+                android:layout_marginEnd="@dimen/p1"
+                android:id="@+id/img_tag"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_search_user"
+                android:textSize="12sp"
+                android:textColor="@color/txt_tag_gray"
+                android:id="@+id/txt_tag_name"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/llayout_top_search">
+
+            <ImageView
+                style="@style/icon_porerty"
+                android:layout_marginEnd="@dimen/p2"
+                android:src="@drawable/ic_love"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_hot_search"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <com.example.lib_common.widget.flowlayout.TagFlowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/p3"
+            android:layout_marginBottom="@dimen/p2"
+            android:id="@+id/tlayout_hot_search"
+            android:layout_marginEnd="80dp"/>
+
+
+    </LinearLayout>
+</layout>

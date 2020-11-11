@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.example.found.view.fragment.SearchGoodsResultFragment.EventPresenter"/>
+        <import type="androidx.databinding.ObservableField"/>
+        <variable
+            name="eventPresenter"
+            type="EventPresenter"/>
+        <variable
+            name="minValue"
+            type="ObservableField&lt;String&gt;" />
+        <variable
+            name="maxValue"
+            type="ObservableField&lt;String&gt;" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/p1"
+                android:gravity="center"
+                android:id="@+id/llayout_comprehensive"
+                android:onClick="@{(v) -> eventPresenter.onClick(v)}">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_comprehensive"
+                    android:textColor="#A0A0A0"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:id="@+id/txt_comprehensive"
+                    />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="2dp"
+                    android:src="@drawable/ic_pull_down"
+                    android:id="@+id/img_pull"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/p1"
+                android:gravity="center"
+                android:id="@+id/llayout_select"
+                android:onClick="@{(v) -> eventPresenter.onClick(v)}">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_select"
+                    android:id="@+id/txt_select"
+                    android:textColor="#A0A0A0"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="@dimen/p2"
+                    android:src="@drawable/ic_select"
+                    android:id="@+id/img_select" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EBEBEB">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout"
+                android:scrollbars="vertical"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                />
+
+            <include layout="@layout/state_no_search_result"
+                android:id="@+id/include"
+                android:visibility="gone"
+                />
+            
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="-40dp"
+                android:src="@drawable/ic_to_top"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/p5"
+                android:id="@+id/fba"
+                android:onClick="@{(v) -> eventPresenter.onClick(v)}"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/view_shadow"
+                android:background="#88C2C2C2"
+                android:visibility="gone"
+                android:onClick="@{(v) -> eventPresenter.onClick(v)}"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="152dp"
+                android:orientation="vertical"
+                android:id="@+id/llayout_sort_way"
+                android:background="@android:color/white"
+                android:layout_marginTop="-152dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView
+                    style="@style/sort_way"
+                    android:id="@+id/txt_sort_comprehensive"
+                    android:text="@string/sort_item_comprehensive"
+                    android:textColor="@color/txt_yellow"
+                    android:onClick="@{(v) -> eventPresenter.onClick(v)}"/>
+
+                <TextView
+                    style="@style/sort_way"
+                    android:id="@+id/txt_sort_up"
+                    android:text="@string/txt_sort_up"
+                    android:onClick="@{(v) -> eventPresenter.onClick(v)}"/>
+
+                <TextView
+                    style="@style/sort_way"
+                    android:id="@+id/txt_sort_down"
+                    android:text="@string/txt_sort_down"
+                    android:onClick="@{(v) -> eventPresenter.onClick(v)}"/>
+
+                <TextView
+                    style="@style/sort_way"
+                    android:id="@+id/txt_new_publication"
+                    android:text="@string/txt_sort_publication"
+                    android:onClick="@{(v) -> eventPresenter.onClick(v)}"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llayout_screen"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:layout_marginTop="-220dp"
+                android:clickable="true"
+                android:focusable="true"
+               >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_label"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <com.example.lib_common.widget.flowlayout.TagFlowLayout
+                        android:id="@+id/tlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_price"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/edit_lowest_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_price_range"
+                        android:hint="@string/txt_lowest_price"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:paddingStart="15dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="2dp"
+                        android:text="@={minValue}"
+                        android:textColor="#8D959F"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="@dimen/p1"
+                        android:layout_marginStart="@dimen/p1"
+                        android:layout_marginEnd="@dimen/p1"
+                        android:background="@drawable/bg_tag" />
+
+                    <EditText
+                        android:id="@+id/edit_highest_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_price_range"
+                        android:hint="@string/txt_highest_price"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:paddingStart="15dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="2dp"
+                        android:text="@={maxValue}"
+                        android:textColor="#8D959F"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.83"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_reset"
+                        android:layout_width="68dp"
+                        android:layout_height="22dp"
+                        android:background="@drawable/ic_reset"
+                        android:onClick="@{(v)->eventPresenter.onClick(v)}" />
+
+                    <Button
+                        android:id="@+id/btn_determine"
+                        android:layout_width="68dp"
+                        android:layout_height="22dp"
+                        android:background="@drawable/ic_determine"
+                        android:onClick="@{(v)->eventPresenter.onClick(v)}" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/login_bg_login_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/login_new_user_part_edt"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.example.lib_common.editext.PatternEditText
+                    android:lines="1"
+                    android:id="@+id/login_edt_phone_new_user"
+                    android:inputType="phone"
+                    android:textSize="16sp"
+                    android:textColor="@color/login_input_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="手机号码"
+                    android:textColorHint="@color/login_grey_txt"
+                    android:background="@color/login_white"/>
+
+                <View
+                    android:background="@color/login_grey_input_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"/>
+                <TextView
+                    android:id="@+id/login_txt_phone_note_new_user"
+                    android:textSize="12sp"
+                    android:textColor="@color/login_grey_txt"
+                    android:text="未注册的手机号将会自动创建近享账户"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <EditText
+                        android:lines="1"
+                        android:inputType="textPassword"
+                        android:background="@color/login_white"
+                        android:id="@+id/login_edt_new_user_password"
+                        android:textSize="16sp"
+                        android:hint="请输入密码"
+                        android:layout_toStartOf="@id/login_img_new_user_eye_part"
+                        android:textColor="@color/login_input_txt"
+                        android:textColorHint="@color/login_grey_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+
+                    <RelativeLayout
+                        android:id="@+id/login_img_new_user_eye_part"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true">
+
+                        <ImageView
+                            android:id="@+id/login_img_new_user_eye"
+                            android:visibility="gone"
+                            android:layout_centerInParent="true"
+                            android:src="@mipmap/ic_password_eye"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <View
+                            android:id="@+id/login_img_new_user_blind_eye"
+                            android:background="@color/login_colorPrimary"
+                            android:layout_centerInParent="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"/>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:background="@color/login_grey_input_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"/>
+
+                <TextView
+                    android:id="@+id/login_txt_password_note_new_user"
+                    android:textSize="12sp"
+                    android:textColor="@color/login_grey_txt"
+                    android:text="检测到您首次登陆，为了账号安全请设置密码"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:textColor="@color/design_default_color_error"
+                android:textSize="@dimen/login_min_txt_size"
+                android:text=""
+                android:id="@+id/login_txt_new_user_error_deal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1">
+
+           <com.example.login.view.ui.LoginRelativeBtn
+               android:id="@+id/login_btn_new_user"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/login_normal_input_height"
+               app:normal_txt="@color/login_white"
+               android:layout_gravity="bottom"
+               android:layout_marginBottom="20dp"
+               app:center_txt="开启近享生活"/>
+
+       </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

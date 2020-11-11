@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+>
+
+    <data>
+        <variable
+            name="eventPresenter"
+            type="com.example.mvvm_simple.view.ReleaseIdleActivity.EventPresenter" />
+
+        <variable
+            name="viewModel"
+            type="com.example.mvvm_simple.viewmodel.ReleaseIdleViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:fitsSystemWindows="true"
+        android:background="#FFFFFF">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:layout_below="@id/llayout_toolbar"
+            android:background="#7AD8D8D8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:clipChildren="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="0dp"
+                    android:gravity="center_vertical"
+                    >
+
+                    <ImageView
+                        style="@style/IdleImageViewStyle"
+                        android:src="@drawable/ic_idle_goods"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_idle_goods"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@color/picture_color_black"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_white_round_8dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textSize="13sp"
+                        android:maxLines="25"
+                        android:id="@+id/edit_goods_name"
+                        android:text="@={viewModel.goodsName}"
+                        />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_white_round_8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="6dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:paddingBottom="12dp"
+                    android:clipChildren="false">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="132dp"
+                        android:hint="@string/idle_edit_hint"
+                        android:textSize="15sp"
+                        android:inputType="textMultiLine"
+                        android:gravity="start"
+                        android:id="@+id/edit_reason"
+                        android:background="@color/white"
+                        android:text="@={viewModel.goodsDetail}"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/recyclerview"
+                        android:overScrollMode="never"
+                        android:layout_below="@+id/edit_reason"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="0dp"
+                    android:onClick="@{(v) -> eventPresenter.onClick(v)}"
+                    android:id="@+id/relayout_price"
+                    android:background="?android:attr/selectableItemBackground"
+                    >
+
+                    <ImageView
+                        style="@style/IdleImageViewStyle"
+                        android:src="@drawable/ic_idle_price"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/img_price"/>
+
+                    <TextView
+                        style="@style/IdleTxtStyle"
+                        android:text="@string/txt_idle_price"
+                        android:layout_toEndOf="@id/img_price"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="24dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="0dp"
+                        android:paddingVertical="4dp"
+                        android:src="@drawable/ic_mine_right_arraw"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:id="@+id/img_price_right_arrow"
+                        />
+
+                    <TextView
+                        android:background="@null"
+                        android:textSize="14sp"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/img_price_right_arrow"
+                        android:layout_width="wrap_content"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_price"
+                        android:text="@{@string/yuan + viewModel.price}"
+                      />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.33dp"
+                        android:background="#979797"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="12dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="0dp"
+                    android:onClick="@{(v) -> eventPresenter.onClick(v)}"
+                    android:id="@+id/relayout_number"
+                    android:background="?android:attr/selectableItemBackground">
+
+                    <ImageView
+                        style="@style/IdleImageViewStyle"
+                        android:src="@drawable/ic_idle_number"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/img_number"/>
+
+                    <TextView
+                        style="@style/IdleTxtStyle"
+                        android:text="@string/txt_number"
+                        android:layout_toEndOf="@id/img_number"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="24dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="0dp"
+                        android:paddingVertical="4dp"
+                        android:src="@drawable/ic_mine_right_arraw"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:id="@+id/img_number_right_arrow"/>
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:background="@null"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/img_number_right_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_number"
+                        android:text="@={viewModel.number}"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.33dp"
+                        android:background="#979797"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="12dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="0dp"
+                    android:id="@+id/relayout_more_information"
+                    android:onClick="@{(v) -> eventPresenter.onClick(v)}"
+                    android:background="?android:attr/selectableItemBackground">
+
+                    <ImageView
+                        style="@style/IdleImageViewStyle"
+                        android:src="@drawable/ic_idle_more"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/img_more"/>
+
+                    <TextView
+                        style="@style/IdleTxtStyle"
+                        android:text="@string/txt_more_information"
+                        android:layout_toEndOf="@id/img_more"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="24dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="0dp"
+                        android:paddingVertical="4dp"
+                        android:src="@drawable/ic_mine_right_arraw"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:id="@+id/img_more_right_arrow"/>
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/img_more_right_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_more"
+                        android:text="@string/txt_idle_classification_and_labels"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.33dp"
+                        android:background="#979797"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="12dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:paddingStart="8dp"
+            android:paddingEnd="12dp"
+            android:gravity="center_vertical"
+            android:id="@+id/llayout_toolbar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_cancel"
+                android:textSize="14sp"
+                android:onClick="@{(v) -> eventPresenter.onClick(v)}"
+                android:id="@+id/txt_cancel"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="@string/txt_publish"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_publish"
+                android:textSize="14sp"
+                android:onClick="@{(v) -> eventPresenter.onClick(v)}"
+                android:id="@+id/txt_publish"
+                android:background="@drawable/bg_yellow_gradient_round"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

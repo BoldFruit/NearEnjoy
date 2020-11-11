@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="rl_btn_default_normal_color">#d0d3d1</color>
+    <color name="btn_start_trans90_color">#FAD961</color>
+    <color name="btn_end_trans90_color">#F76B1C</color>
+    <color name="link_data_normal_bg">#ffffff</color>
+    <color name="link_data_select_bg">#00000000</color>
+    <color name="link_data_select_title">#ffa500</color>
+    <color name="link_data_normal_title">#000000</color>
+    <color name="gray_alpha_48">#7A6D6D6D</color>
+    <color name="common_yellow">#F2DD54</color>
+    <color name="common_dark_gray">#8a8a8a</color>
+    <color name="common_light_gray">#dbdbdb</color>
+
+    <color name="common_app_color_selectSchool">#FFF6DD</color>
+
+</resources>

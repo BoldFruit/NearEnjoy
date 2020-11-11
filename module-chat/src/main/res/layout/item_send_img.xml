@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:chat="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="view"
+            type="View" />
+        <variable
+            name="imgItemHolder"
+            type="com.example.module_chat.adapter.ChatSendImgViewHolder" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_alignTop="@id/send_img_chatView"
+            android:layout_alignBottom="@id/send_img_chatView"
+            android:layout_toStartOf="@id/send_img_chatView"
+            android:id="@+id/send_img_type_part"
+            android:layout_width="20dp"
+            android:layout_height="20dp">
+
+            <ImageView
+                android:visibility="@{imgItemHolder.holderMsgField.sendingType == 0 ? View.VISIBLE : View.GONE}"
+                android:src="@drawable/ic_send_error"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ProgressBar
+                android:visibility="@{imgItemHolder.holderMsgField.sendingType == 1 ? View.VISIBLE : View.GONE}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+        <com.example.module_chat.chatbubble.ChatView
+            android:maxWidth="80dp"
+            android:id="@+id/send_img_chatView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/send_img_avatar"
+            android:layout_marginStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="10dp"
+            android:paddingRight="15dp"
+            chat:arrow_direction="right"
+            chat:arrow_up_distance = "14dp"
+            chat:arrow_width = "5dp"
+            chat:arrow_height = "12dp"
+            chat:stroke_width = "1dp"
+            chat:is_arrow_center="false"
+            chat:stroke_color = "#CCCCCC"
+            chat:fill_color = "#ffbf00"
+            chat:press_stroke_color = "#50111111"
+            chat:press_fill_color = "#50111111"
+            chat:conner_radius = "6dp">
+
+           <com.example.lib_common.imageview.ResizableImageView
+               app:max_resize_width="80dp"
+               android:imgUrl="@{imgItemHolder.imgField.thumbImgPath}"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+        </com.example.module_chat.chatbubble.ChatView>
+
+        <ImageView
+            android:imgUrl="@{imgItemHolder.avatarField}"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/send_img_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+    </RelativeLayout>
+
+
+</layout>

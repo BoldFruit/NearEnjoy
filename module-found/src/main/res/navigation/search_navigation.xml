@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_navigation"
+    app:startDestination="@id/searchFragment">
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.found.view.fragment.ListFragment"
+        android:label="ListFragment" >
+        <action
+            android:id="@+id/action_listFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_searchUserResultFragment"
+            app:destination="@id/searchUserResultFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_searchGoodsResultFragment"
+            app:destination="@id/searchGoodsResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.found.view.fragment.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_searchUserResultFragment"
+            app:destination="@id/searchUserResultFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_searchGoodsResultFragment"
+            app:destination="@id/searchGoodsResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchGoodsResultFragment"
+        android:name="com.example.found.view.fragment.SearchGoodsResultFragment"
+        android:label="SearchGoodsResultFragment" >
+        <action
+            android:id="@+id/action_searchGoodsResultFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_searchGoodsResultFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchUserResultFragment"
+        android:name="com.example.found.view.fragment.SearchUserResultFragment"
+        android:label="SearchUserResultFragment" >
+        <action
+            android:id="@+id/action_searchUserResultFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_searchUserResultFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+</navigation>

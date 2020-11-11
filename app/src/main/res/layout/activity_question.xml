@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.lib_common.imageview.ResizableImageView
+            android:id="@+id/app_question_background_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_final_back_small"/>
+
+
+        <FrameLayout
+            android:orientation="vertical"
+            android:id="@+id/login_linear"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:elevation="4dp"
+            android:layout_below="@+id/app_question_background_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-40dp"
+            android:background="@drawable/bg_app_question">
+
+           <androidx.core.widget.NestedScrollView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:paddingStart="20dp"
+                   android:paddingEnd="20dp">
+
+                   <LinearLayout
+                       android:orientation="vertical"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <LinearLayout
+                           android:layout_marginTop="20dp"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+                           <TextView
+                               android:text="同学你是哪个学校的？告诉小橡呗"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"/>
+
+                       </LinearLayout>
+
+                       <com.example.mvvm_simple.view.SchoolSelector
+                           android:id="@+id/app_question_selector"
+                           android:layout_marginTop="10dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+
+
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+                       <TextView
+                           android:layout_marginTop="10dp"
+                           android:text="为了保障同学安全，请回答小橡的三个问题吧"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+
+                       <com.example.mvvm_simple.view.checkbox.NormalFourCheckPart
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+
+                   </LinearLayout>
+
+                   <RelativeLayout
+                       android:layout_marginTop="20dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="0dp"
+                       android:layout_weight="1"
+                       android:layout_marginBottom="10dp">
+
+                       <com.example.lib_common.button.RelativeButton
+                           app:center_txt="提交"
+                           android:layout_marginLeft="20dp"
+                           android:layout_marginRight="20dp"
+                           android:id="@+id/question_btn"
+                           android:layout_width="match_parent"
+                           android:layout_height="40dp"/>
+
+                   </RelativeLayout>
+               </LinearLayout>
+
+
+           </androidx.core.widget.NestedScrollView>
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+</layout>

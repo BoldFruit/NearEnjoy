@@ -1,0 +1,64 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION.toInteger()
+    buildToolsVersion BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION.toInteger()
+        targetSdkVersion TARGET_SDK_VERSION.toInteger()
+        versionCode VERSION_CODE.toInteger()
+        versionName VERSION_NAME
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.lifecycle
+
+    // 网络请求失败替换框架
+    api deps.tools.loadsir
+    //引入rxjava
+    api deps.tools.rxjava
+    api deps.tools.rxAndroid
+    api deps.tools.gson
+    api deps.tools.glide
+    api deps.tools.matisse
+    api deps.tools.photo_selector
+    api deps.tools.kotlin
+    api deps.tools.paging
+    api deps.tools.paging_runtime
+    api deps.tools.rxlife
+
+
+    api deps.project.framework.arouter
+    api deps.project.framework.annotations
+
+    api deps.project.base.event
+    api deps.project.lib.common
+    api deps.android.material
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+    // Optional, if you use support library fragments:
+    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
+}

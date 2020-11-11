@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_mine_edit_avatar">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="@string/txt_mine_change_avatar"
+        android:id="@+id/txt_change_avatar"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.33dp"
+        android:background="@android:color/black"
+        android:layout_marginHorizontal="20dp"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:id="@+id/cancel"
+        android:text="@string/txt_mine_cancel"/>
+        
+</LinearLayout>

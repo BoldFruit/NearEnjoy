@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // As-3.4 +
+    annotationProcessor deps.processor.annotation_auto_service_apt
+    compileOnly deps.processor.annotation_auto_service_apt
+
+    implementation deps.project.framework.annotations
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"

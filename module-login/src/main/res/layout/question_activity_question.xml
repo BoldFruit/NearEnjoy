@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <com.example.lib_common.imageview.ResizableImageView
+            android:id="@+id/question_img_bg"
+            android:src="@drawable/ic_final_back_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:padding="8dp"
+            android:layout_marginTop="-40dp"
+            android:layout_below="@id/question_img_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/question_bg_main">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:visibility="gone"
+                app:lottie_repeatMode="reverse"
+                android:id="@+id/question_animation_view"
+                app:lottie_rawRes="@raw/question_loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:visibility="gone"
+                android:text="正在生成题目······"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+
+                android:id="@+id/question_main_part"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.example.lib_common.selector.SchoolSelector
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.example.lib_common.checkpoint.single_check_point.SimpleFourCheck
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/question_first_questions_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <com.example.lib_common.checkpoint.single_check_point.SimpleFourCheck
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/question_second_questions_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <com.example.lib_common.checkpoint.single_check_point.SimpleFourCheck
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/question_third_questions_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+                   <LinearLayout
+                       android:layout_marginBottom="40dp"
+                       android:layout_alignParentBottom="true"
+                       android:orientation="vertical"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+                       <com.example.lib_common.button.RelativeButton
+                           android:id="@+id/question_rl_btn"
+                           android:layout_gravity="center_horizontal"
+                           android:layout_width="200dp"
+                           android:layout_height="40dp"
+                           app:center_txt="进入近享"/>
+
+                       <TextView
+                           android:id="@+id/question_txt_error"
+                           android:textSize="12sp"
+                           android:text="答案错误"
+                           android:visibility="gone"
+                           android:layout_gravity="center_horizontal"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                   </LinearLayout>
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient_yellow"
+        android:fitsSystemWindows="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fitsSystemWindows="true"
+            android:id="@+id/toolbar"
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="fitCenter"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_onsale_left_arrow"
+                android:layout_centerVertical="true"
+                android:id="@+id/img_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/txt_onsale"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_onsale_top_round_gray"
+            android:paddingStart="6dp"
+            android:paddingEnd="8dp"
+            android:orientation="vertical"
+            android:layout_below="@id/toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/relayout_placeholder"
+                android:gravity="center"
+               >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/img_no_data"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/bg_mine_no_data"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_no_data"
+                    android:text="@string/mine_txt_no_data"
+                    android:id="@+id/txt_note"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignWithParentIfMissing="true"/>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recyclerview" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:id="@+id/llayout_dash">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@drawable/main_bg_dash"
+                    android:layout_toStartOf="@+id/txt_bottom"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="4dp"
+                    android:id="@+id/left_dot" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#6D7278"
+                    android:textSize="12sp"
+                    android:id="@+id/txt_bottom"
+                    android:layout_centerInParent="true"
+                    android:text="@string/txt_onsale_invalide_goods" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@drawable/main_bg_dash"
+                    android:layout_toEndOf="@+id/txt_bottom"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:id="@+id/right_dot" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

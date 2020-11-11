@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="app_colorPrimary">#E6FFD524</color>
+    <color name="app_colorPrimaryDark">#00574B</color>
+    <color name="app_colorAccent">#E5AD14</color>
+
+    <color name="app_white">#FFFFFF</color>
+    <color name="app_grey_line">#979797</color>
+    <color name="app_grey_txt">#8D959F</color>
+    <color name="app_grey_input_line">#6D7278</color>
+    <color name="app_grey_btn_enter_main">#C8C8C8</color>
+    <color name="app_btn_start_trans90_color">#FAD961</color>
+    <color name="app_btn_end_trans90_color">#F76B1C</color>
+
+    <color name="app_input_txt">#E5AD14</color>
+    <color name="app_input_error_red">#ff172a</color>
+    <color name="colorWelcome">#FAD961</color>
+    <color name="app_color_selectSchool">#FFF6DD</color>
+    <color name="app_color_black">#454545</color>
+    <color name="app_color_light_grey_trans_50">#80e9e9e9</color>
+
+    <color name="app_yellow_indicator">#D8D8D8</color>
+    <color name="toolbar_yellow">#F7B500</color>
+    <color name="main_bg_tag_gray">#7A7A7A</color>
+    <color name="main_bg_tag_yellow">#F7B500</color>
+    <color name="black">#000000</color>
+
+    <color name="detail_back_start">#fcdb00</color>
+    <color name="detail_back_end">#f7b500</color>
+    <color name="detail_price_red">#E02020</color>
+    <color name="detail_txt_blue">#1772B7</color>
+    <color name="detail_wanna_more_grey">#80e9e9e9</color>
+
+</resources>

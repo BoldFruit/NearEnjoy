@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.login">
+
+    <application>
+        <activity android:name=".new_part.QuestionActivity"></activity>
+        <activity
+            android:name=".view.LoginActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".view.LoginProblemsActivity" />
+    </application>
+
+</manifest>

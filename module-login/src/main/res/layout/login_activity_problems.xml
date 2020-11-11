@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.LoginProblemsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/login_problems_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            app:navigationIcon="@mipmap/login_ic_back_oriange">
+
+            <TextView
+                android:id="@+id/login_fragment_problems_title"
+                android:text="遇到问题"
+                android:textSize="18sp"
+                android:textColor="@color/login_input_txt"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <fragment
+            android:id="@+id/login_problems_container"
+            android:layout_below="@id/login_problems_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/login_nav_problems">
+
+
+        </fragment>
+
+    </RelativeLayout>
+
+</layout>

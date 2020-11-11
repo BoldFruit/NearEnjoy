@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="eventPresenter"
+            type="com.example.mvvm_simple.view.fragment.MineFragment.EventPresenter" />
+    </data>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#32D8D8D8">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="22"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="132dp"
+                    android:background="@drawable/bg_mine_yellow"
+                    android:id="@+id/relayout_presonal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_mine_avatar"
+                        android:id="@+id/img_mine_avatar"
+                        android:layout_marginStart="14dp"
+                        android:onClick="@{v -> eventPresenter.onClick(v)}"
+                        android:layout_marginEnd="15dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/img_mine_avatar"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:layout_alignTop="@+id/img_mine_avatar"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:text="@string/txt_mine_name"
+                        android:id="@+id/txt_mine_name"
+                        style="@style/LimitNumberTextStyle"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/img_mine_avatar"
+                        android:layout_marginBottom="2dp"
+                        android:textSize="10sp"
+                        android:textColor="#8D959F"
+                        android:text="@string/txt_mine_introduction"
+                        android:layout_alignBottom="@+id/img_mine_avatar"
+                        android:id="@+id/txt_mine_introduction"
+                        style="@style/LimitNumberTextStyle"/>
+                        
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_mine_setting"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@id/img_mine_avatar"
+                        android:layout_marginEnd="7dp"
+                        android:id="@+id/img_mine_setting"
+                        android:onClick="@{v -> eventPresenter.onClick(v)}"/>
+                    
+                </RelativeLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="-29dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/bg_mine_white_round">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/relayout_mine_wait_confirm"
+                        android:onClick="@{v -> eventPresenter.onClick(v)}">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:scaleType="fitCenter"
+                            android:id="@+id/img_mine_wait_confirm"
+                            android:src="@drawable/ic_mine_wait_confirm"
+                            android:layout_alignTop="@+id/line"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_mine_wait_confirm"
+                            android:textColor="#F7B500"
+                            android:text="@string/txt_mine_wait_confirm"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="4dp"
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="#B9B9B9"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:id="@+id/line"
+                            android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/relayout_mine_wait_receive_goods"
+                        android:onClick="@{v -> eventPresenter.onClick(v)}"
+                       >
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:scaleType="fitCenter"
+                            android:id="@+id/img_mine_wait_receive"
+                            android:src="@drawable/ic_mine_wait_receive"
+                            android:layout_alignTop="@+id/lines"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_mine_wait_receive"
+                            android:textColor="#F7B500"
+                            android:text="@string/txt_mine_wait_receive"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="4dp"
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="#B9B9B9"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:id="@+id/lines"
+                            android:layout_alignParentEnd="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/relayout_mine_wait_judge"
+                        android:onClick="@{v -> eventPresenter.onClick(v)}"
+                       >
+r
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:scaleType="fitCenter"
+                            android:id="@+id/img_mine_wait_judge"
+                            android:src="@drawable/ic_mine_wait_judge"
+                            android:layout_alignTop="@+id/third_line"
+                            android:layout_centerHorizontal="true"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_mine_wait_judge"
+                            android:textColor="#F7B500"
+                            android:text="@string/txt_mine_wait_judge"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="4dp"
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:id="@+id/third_line"
+                            android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="22"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_mine_white_round_3dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_mine_on_sale"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="10sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:textColor="#B9B9B9"
+                            android:id="@+id/txt_check_user_goods"
+                            android:text="@string/txt_mine_check_all_sales"
+                            android:onClick="@{v -> eventPresenter.onClick(v)}" />
+
+                        <ImageView
+                            android:layout_height="6dp"
+                            android:layout_width="6dp"
+                            android:src="@drawable/ic_mine_right_arraw"
+                            android:scaleType="fitCenter"
+                            />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#B9B9B9"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <com.example.lib_common.widget.banner.Banner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/banner"
+                        app:orientation="vertical"
+                        />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/relayout_no_data"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        >
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/bg_mine_no_data"
+                            android:id="@+id/img_no_data"
+                            android:layout_centerInParent="true"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_hint"
+                            android:layout_below="@+id/img_no_data"
+                            android:text="@string/mine_txt_no_data"
+                            android:layout_centerHorizontal="true"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="32"
+                android:background="@drawable/bg_mine_white_round"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:paddingTop="8dp"
+                android:orientation="vertical"
+                >
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:text="@string/txt_mine_publication"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B9B9B9"
+                    android:layout_marginTop="5dp"
+                   />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:id="@+id/relayout_carpolling"
+                        android:onClick="@{v -> eventPresenter.onClick(v)}"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            style="@style/MyPublicationImgStyle"
+                            android:src="@drawable/ic_mine_carpooling"
+                            android:id="@+id/img_mine_carpooling"
+                            />
+
+                        <TextView
+                            style="@style/MyPublicationTxtStyle"
+                            android:text="@string/txt_mine_carpooling"
+                            android:layout_below="@id/img_mine_carpooling"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:id="@+id/relayout_goodspolling"
+                        android:onClick="@{v -> eventPresenter.onClick(v)}"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            style="@style/MyPublicationImgStyle"
+                            android:src="@drawable/ic_mine_goodspooling"
+                            android:id="@+id/img_mine_goodspooling"
+                            />
+
+                        <TextView
+                            style="@style/MyPublicationTxtStyle"
+                            android:text="@string/txt_mine_goodspooling"
+                            android:layout_below="@id/img_mine_goodspooling"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:id="@+id/relayout_mine_help"
+                        android:onClick="@{v -> eventPresenter.onClick(v)}"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            style="@style/MyPublicationImgStyle"
+                            android:src="@drawable/ic_mine_help"
+                            android:id="@+id/img_mine_help"
+                            />
+
+                        <TextView
+                            style="@style/MyPublicationTxtStyle"
+                            android:text="@string/txt_mine_help"
+                            android:layout_below="@id/img_mine_help"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:id="@+id/relayout_mine_sale"
+                        android:onClick="@{v -> eventPresenter.onClick(v)}"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            style="@style/MyPublicationImgStyle"
+                            android:src="@drawable/ic_mine_sale"
+                            android:id="@+id/img_mine_sale"
+                            />
+
+                        <TextView
+                            style="@style/MyPublicationTxtStyle"
+                            android:text="@string/ic_mine_sale"
+                            android:layout_below="@id/img_mine_sale"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:id="@+id/relayout_mine_left"
+                        android:onClick="@{v -> eventPresenter.onClick(v)}"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            style="@style/MyPublicationImgStyle"
+                            android:src="@drawable/ic_mine_left"
+                            android:id="@+id/img_mine_left"
+                            />
+
+                        <TextView
+                            style="@style/MyPublicationTxtStyle"
+                            android:text="@string/txt_mine_left"
+                            android:layout_below="@id/img_mine_left"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:id="@+id/relayout_mine_more"
+                        android:onClick="@{v -> eventPresenter.onClick(v)}"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            style="@style/MyPublicationImgStyle"
+                            android:src="@drawable/ic_mine_more"
+                            android:id="@+id/img_mine_more"
+                            />
+
+                        <TextView
+                            style="@style/MyPublicationTxtStyle"
+                            android:text="@string/txt_mine_more"
+                            android:layout_below="@id/img_mine_more"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="16"
+                android:background="@drawable/bg_mine_white_round_top"
+                android:paddingStart="5dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:text="@string/txt_mine_my_business"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#B9B9B9" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/relayout_mine_saled"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:onClick="@{v -> eventPresenter.onClick(v)}"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_mine_saled"
+                            style="@style/MyBusinessImgStyle"
+                            android:src="@drawable/ic_mine_saled" />
+
+                        <TextView
+                            style="@style/MyBusinessTxtStyle"
+                            android:layout_below="@id/img_mine_saled"
+                            android:text="@string/txt_mine_saled" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relayout_mine_buy"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:onClick="@{v -> eventPresenter.onClick(v)}"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_mine_buy"
+                            style="@style/MyBusinessImgStyle"
+                            android:src="@drawable/ic_mine_buy" />
+
+                        <TextView
+                            style="@style/MyBusinessTxtStyle"
+                            android:layout_below="@id/img_mine_buy"
+                            android:text="@string/txt_mine_buy" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relayout_mine_collect"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:onClick="@{v -> eventPresenter.onClick(v)}"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_mine_collect"
+                            style="@style/MyBusinessImgStyle"
+                            android:src="@drawable/ic_mine_collect" />
+
+                        <TextView
+                            style="@style/MyBusinessTxtStyle"
+                            android:layout_below="@id/img_mine_collect"
+                            android:text="@string/txt_mine_collect" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_release_yellow_round" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:paddingVertical="8dp"
+                android:text="@string/txt_release_input_hint"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:paddingHorizontal="20dp"
+               android:gravity="center"
+               android:textSize="14sp"
+               android:textColor="@color/cpb_blue"
+               android:text="@string/txt_confirm"
+               android:id="@+id/txt_confirm"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_idle_price"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_release_money"
+                android:textSize="16sp"
+                android:textColor="@color/common_light_gray"
+                android:id="@+id/txt_money" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:background="@null"
+                android:hint="@string/edit_release_zero"
+                android:inputType="numberDecimal"
+                android:textColorHint="@color/common_light_gray"
+                android:id="@+id/edit_price" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@color/common_light_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+        >
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_number"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:background="@null"
+                android:inputType="number"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:hint="@string/edit_release_number"
+                android:textColorHint="@color/common_light_gray"
+                android:id="@+id/edit_number" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

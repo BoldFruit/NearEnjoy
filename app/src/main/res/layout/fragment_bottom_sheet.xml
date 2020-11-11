@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_white_round_25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:id="@+id/relayout_carpolling"
+                android:gravity="center">
+
+                <ImageView
+                    style="@style/MyPublicationImgStyle"
+                    android:src="@drawable/ic_mine_carpooling"
+                    android:id="@+id/img_mine_carpooling" />
+
+                <TextView
+                    style="@style/MyPublicationTxtStyle"
+                    android:text="@string/txt_bottom_publish_carpolling"
+                    android:layout_below="@id/img_mine_carpooling" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:id="@+id/relayout_goodspolling"
+                android:gravity="center">
+
+                <ImageView
+                    style="@style/MyPublicationImgStyle"
+                    android:src="@drawable/ic_mine_goodspooling"
+                    android:id="@+id/img_mine_goodspooling" />
+
+                <TextView
+                    style="@style/MyPublicationTxtStyle"
+                    android:text="@string/txt_bottom_goodspooling"
+                    android:layout_below="@id/img_mine_goodspooling" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:id="@+id/relayout_mine_help"
+                android:gravity="center">
+
+                <ImageView
+                    style="@style/MyPublicationImgStyle"
+                    android:src="@drawable/ic_mine_help"
+                    android:id="@+id/img_mine_help" />
+
+                <TextView
+                    style="@style/MyPublicationTxtStyle"
+                    android:text="@string/txt_bottom_help"
+                    android:layout_below="@id/img_mine_help" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:id="@+id/relayout_mine_sale"
+                android:gravity="center">
+
+                <ImageView
+                    style="@style/MyPublicationImgStyle"
+                    android:src="@drawable/ic_mine_sale"
+                    android:id="@+id/img_mine_sale" />
+
+                <TextView
+                    style="@style/MyPublicationTxtStyle"
+                    android:text="@string/txt_bottom_request_buy"
+                    android:layout_below="@id/img_mine_sale" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:id="@+id/relayout_mine_left"
+                android:gravity="center">
+
+                <ImageView
+                    style="@style/MyPublicationImgStyle"
+                    android:src="@drawable/ic_mine_left"
+                    android:id="@+id/img_mine_left" />
+
+                <TextView
+                    style="@style/MyPublicationTxtStyle"
+                    android:text="@string/txt_bottom_no_use"
+                    android:layout_below="@id/img_mine_left" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:id="@+id/relayout_mine_more"
+                android:gravity="center">
+
+                <ImageView
+                    style="@style/MyPublicationImgStyle"
+                    android:src="@drawable/ic_mine_more"
+                    android:id="@+id/img_mine_more" />
+
+                <TextView
+                    style="@style/MyPublicationTxtStyle"
+                    android:text="@string/txt_mine_more"
+                    android:layout_below="@id/img_mine_more" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

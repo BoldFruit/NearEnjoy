@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/chat_emoji_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.example.lib_neuqer_chat_ui.viewpager.WrapContentViewpager
+            android:id="@+id/vp_emoji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"/>
+        <com.example.lib_neuqer_chat_ui.widegt.IndicatorView
+            android:id="@+id/indicator_emoji"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="bottom"
+            app:gravity="0"
+            android:background="#f3f3f3"
+            android:layout_marginTop="30dp"
+            app:indicatorColor="#668b8989"
+            app:indicatorColorSelected="#ffffff"
+            app:indicatorWidth="6"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+if (IS_DEBUG.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+
+
+android {
+//    compileSdkVersion COMPILE_SDK_VERSION.toInteger()
+    compileSdkVersion 29
+    buildToolsVersion BUILD_TOOLS_VERSION
+
+
+    defaultConfig {
+        if (IS_DEBUG.toBoolean()) {
+            applicationId "com.example.module_chat"
+        }
+//        minSdkVersion MIN_SDK_VERSION.toInteger()
+        minSdkVersion 21
+//        targetSdkVersion TARGET_SDK_VERSION.toInteger()
+        targetSdkVersion 29
+        versionCode VERSION_CODE.toInteger()
+        versionName VERSION_NAME
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    sourceSets {
+        main {
+            if (IS_DEBUG.toBoolean()) {
+                manifest.srcFile "src/main/AndroidManifest.xml"
+            } else {
+                manifest.srcFile 'src/main/manifest/AndroidManifest.xml'
+            }
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation group: 'androidx.swiperefreshlayout', name: 'swiperefreshlayout', version: '1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation deps.project.lib.chat
+    implementation deps.android.material
+    implementation deps.project.base.base
+    implementation deps.project.base.network
+    implementation deps.project.lib.data
+    implementation deps.project.lib.common
+    annotationProcessor deps.tools.glide_compiler
+}

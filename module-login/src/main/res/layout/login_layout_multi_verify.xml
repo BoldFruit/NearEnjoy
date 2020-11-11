@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_multi_part"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/login_btn_multi_verify"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/login_bg_login_btn_verify_normal">
+
+        <TextView
+            android:id="@+id/login_txt_multi_verify"
+            android:text="获取验证码"
+            android:textSize="14sp"
+            android:textColor="@color/login_grey_txt"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+    <com.example.lib_common.textview.CountDownTv
+        android:id="@+id/login_txt_multi_verify_count_down"
+        android:text="60s"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/login_input_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
+

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:context="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="eventPresenter"
+            type="com.example.mvvm_simple.view.IdleInformationActivity.EventPresenter" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:paddingStart="8dp"
+            android:paddingEnd="12dp"
+            android:gravity="center_vertical"
+            android:id="@+id/toolbar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_cancel"
+                android:textSize="14sp"
+                android:id="@+id/txt_cancel"
+                android:onClick="@{(v) -> eventPresenter.onClick(v)}"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="@string/txt_more_information" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_confirm"
+                android:textSize="14sp"
+                android:textColor="#F7B500"
+                android:id="@+id/txt_confirm"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:onClick="@{(v) -> eventPresenter.onClick(v)}"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="0dp"
+            android:text="@string/txt_classification"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="24dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/txt_classification" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_idle_big_yellow_tag"
+            android:gravity="center"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:layout_marginStart="16dp"
+            android:id="@+id/llayout_all"
+            android:layout_below="@+id/txt_classification"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:onClick="@{(v) -> eventPresenter.onClick(v)}">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxEms="5"
+                android:textColor="#FFFFFF"
+                android:id="@+id/txt_tag_name"
+                android:text="@string/txt_all"/>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_right_white_arrow"
+                android:layout_marginStart="4dp"
+                android:id="@+id/img_remove"
+               />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="#979797"
+            android:id="@+id/line"
+            android:layout_marginBottom="12dp"
+            android:layout_below="@id/llayout_all" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="0dp"
+            android:text="@string/txt_label"
+            android:textStyle="bold"
+            android:layout_below="@+id/line"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="12dp"
+            android:id="@+id/txt_labels"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_select_atmost_three"
+            android:textColor="#A0A0A0"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:textSize="13sp"
+            android:layout_alignBaseline="@id/txt_labels" />
+
+        <com.example.lib_common.widget.flowlayout.TagFlowLayout
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_labels"
+            android:id="@+id/tlayout_labels" />
+
+    </RelativeLayout>
+</layout>

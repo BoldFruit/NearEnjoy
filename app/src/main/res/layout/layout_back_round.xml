@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="70dp"
+    android:layout_height="70dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.lib_common.view.EasyRoundView
+        android:layout_alignParentBottom="true"
+        android:elevation="8dp"
+        app:background_color="@color/app_grey_input_line"
+        app:circle_radius="35dp"
+        app:circle_center_x="35dp"
+        app:circle_center_y="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <com.example.lib_common.view.EasyRoundView
+        android:layout_alignParentBottom="true"
+        android:elevation="8dp"
+        app:background_color="@color/white"
+        app:circle_radius="35dp"
+        app:circle_center_x="35dp"
+        app:circle_center_y="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+
+</RelativeLayout>

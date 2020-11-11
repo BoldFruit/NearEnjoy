@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/common_check_point_tv_question_group_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q1：春天在哪里呀春天在哪里？"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.lib_common.checkpoint.single_check_point.SingleCheckPoint
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:id="@+id/common_check_point_scp_fir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:scp_txt="东北大学秦皇岛分校"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toStartOf="@id/common_check_point_scp_sec"
+        app:layout_constraintTop_toBottomOf="@id/common_check_point_tv_question_group_title" />
+
+    <com.example.lib_common.checkpoint.single_check_point.SingleCheckPoint
+        android:layout_marginEnd="20dp"
+        android:id="@+id/common_check_point_scp_sec"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:scp_txt="东北大学秦皇岛分校"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/common_check_point_scp_fir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/common_check_point_scp_fir" />
+
+    <com.example.lib_common.checkpoint.single_check_point.SingleCheckPoint
+        android:layout_marginTop="8dp"
+        android:id="@+id/common_check_point_scp_thi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:scp_txt="东北大学秦皇岛分校"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@id/common_check_point_scp_fir"
+        app:layout_constraintTop_toBottomOf="@id/common_check_point_scp_fir" />
+
+    <com.example.lib_common.checkpoint.single_check_point.SingleCheckPoint
+        android:id="@+id/common_check_point_scp_fou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:scp_txt="东北大学秦皇岛分校"
+        app:layout_constraintStart_toStartOf="@id/common_check_point_scp_sec"
+        app:layout_constraintTop_toTopOf="@id/common_check_point_scp_thi" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

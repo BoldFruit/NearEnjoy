@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/layout_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <com.example.lib_common.view.EasyRoundView
+            android:layout_centerInParent="true"
+            app:circle_center_y="8dp"
+            app:circle_center_x="8dp"
+            app:circle_radius="8dp"
+            app:background_color="@color/app_grey_line"
+            android:layout_width="16dp"
+            android:layout_height="16dp"/>
+        <CheckBox
+            android:id="@+id/check_item_checkbox"
+            android:layout_centerHorizontal="true"
+            style="@style/CheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/check_item_check_txt"
+        android:text="城市广场"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/layout_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

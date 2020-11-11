@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:padding="4dp">
+
+      <View
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintDimensionRatio="1:1"
+          android:background="@drawable/bg_detail_item_wanna_more_round"
+          android:layout_width="0dp"
+          android:layout_height="0dp"/>
+
+      <TextView
+          android:text="12"
+          android:textSize="12sp"
+          app:layout_constraintVertical_chainStyle="packed"
+          android:id="@+id/detail_item_wanna_more_txt_number"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintBottom_toTopOf="@id/detail_item_wanna_more_img_more"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+      <ImageView
+          android:src="@drawable/ic_more"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/detail_item_wanna_more_txt_number"
+          android:id="@+id/detail_item_wanna_more_img_more"
+          android:layout_width="wrap_content"
+          android:layout_height="10dp"/>
+
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

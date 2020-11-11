@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/login_fragment_problems">
+
+    <fragment
+        android:id="@+id/login_fragment_problems"
+        android:name="com.example.login.view.fragment.LoginProblemsFragment"
+        tools:layout="@layout/login_fragment_problems"
+        android:label="LoginProblemsFragment">
+
+        <action
+            android:id="@+id/action_login_problems_to_find_password"
+            app:destination="@id/login_fragment_find_password"/>
+        <action
+            android:id="@+id/action_login_fragment_problems_to_loginChangePhoneFragment"
+            app:destination="@id/loginChangePhoneFragment" />
+        <action
+            android:id="@+id/action_login_fragment_problems_to_loginCantMsgFragment"
+            app:destination="@id/loginCantMsgFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/login_fragment_find_password"
+        android:name="com.example.login.view.fragment.LoginFindPwdFragment"
+        tools:layout="@layout/login_fragment_find_pwd"
+        android:label="LoginFindPasswordFragment">
+
+        <action
+            android:id="@+id/action_login_fragment_find_password_to_loginChangePwdFragment"
+            app:destination="@id/loginChangePwdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginChangePwdFragment"
+        android:name="com.example.login.view.fragment.LoginChangePwdFragment"
+        android:label="fragment_login_change_pwd"
+        tools:layout="@layout/login_fragment_change_pwd" />
+    <fragment
+        android:id="@+id/loginChangePhoneFragment"
+        android:name="com.example.login.view.fragment.LoginChangePhoneFragment"
+        android:label="login_fragment_change_phone"
+        tools:layout="@layout/login_fragment_change_phone" >
+        <action
+            android:id="@+id/action_loginChangePhoneFragment_to_loginBindPhoneFragment"
+            app:destination="@id/loginBindPhoneFragment" />
+        <action
+            android:id="@+id/action_loginChangePhoneFragment_to_login_fragment_find_password"
+            app:destination="@id/login_fragment_find_password" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginBindPhoneFragment"
+        android:name="com.example.login.view.fragment.LoginBindPhoneFragment"
+        android:label="login_fragment_bind_phone"
+        tools:layout="@layout/login_fragment_bind_phone" />
+    <fragment
+        android:id="@+id/loginCantMsgFragment"
+        android:name="com.example.login.view.fragment.LoginCantMsgFragment"
+        android:label="fragment_login_cant_msg"
+        tools:layout="@layout/fragment_login_cant_msg" />
+
+
+</navigation>

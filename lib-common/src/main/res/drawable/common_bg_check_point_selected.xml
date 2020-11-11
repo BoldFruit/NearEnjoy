@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:innerRadius="6dp">
+
+    <solid
+        android:color="@color/link_data_select_title"/>
+
+
+</shape>

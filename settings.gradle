@@ -1,0 +1,119 @@
+
+include ':app', ':base', ':module-login', ':fw-arouter', ':fw-annotations', ':fw-annotations-compiler', ':event', ':network', ':lib-common', ':lib-neuqer_chat', ':lib-data', ':module-splash',':module-found', ':module-chat'
+
+
+
+rootProject.name='MVVM-simple'
+
+// For Dependencies
+
+def deps = [:]
+
+def android = [
+        material    : 'com.google.android.material:material:1.1.0-alpha09'
+]
+
+def androidx = [
+        appcompat       : 'androidx.appcompat:appcompat:1.1.0',
+        constraintlayout: 'androidx.constraintlayout:constraintlayout:1.1.3',
+        lifecycle       : 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+]
+
+def tools = [
+        loadsir             : 'com.kingja.loadsir:loadsir:1.3.6',
+        gson                : 'com.google.code.gson:gson:2.8.6',
+        okhttp              : 'com.squareup.okhttp3:okhttp:4.3.1',
+        logging_interceptor : 'com.squareup.okhttp3:logging-interceptor:4.3.1',
+        retrofit            : 'com.squareup.retrofit2:retrofit:2.7.1',
+        adapter_rxjava      : 'com.squareup.retrofit2:adapter-rxjava2:2.7.1',
+        converter_gson      : 'com.squareup.retrofit2:converter-gson:2.4.0',
+        rxjava              : 'io.reactivex.rxjava2:rxjava:2.2.16',
+        rxlife              : 'com.rxjava.rxlife:rxlife-x:2.0.0',
+        rxAndroid           : 'io.reactivex.rxjava2:rxandroid:2.1.1',
+        rxPermission        : 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar',
+        room_compiler      : 'androidx.room:room-compiler:2.2.2',
+        room                : 'androidx.room:room-runtime:2.2.2',
+
+        navigation_fragment : 'androidx.navigation:navigation-fragment:2.2.2',
+        navigation_ui       : 'androidx.navigation:navigation-ui:2.2.2',
+        netty               : 'io.netty:netty-all:4.1.45.Final',
+        database_check      : 'com.amitshekhar.android:debug-db:1.0.4',
+        glideCompiler       : 'com.github.bumptech.glide:compiler:4.7.1',
+        paging              : 'android.arch.paging:runtime:2.1.0',
+        paging_runtime      : 'androidx.paging:paging-runtime-ktx:2.1.1',
+        glide               : 'com.github.bumptech.glide:glide:4.7.1',
+        glide_compiler      : 'com.github.bumptech.glide:compiler:4.7.1',
+        recyclerview        : 'androidx.recyclerview:recyclerview:1.2.0-alpha01',
+        matisse             : 'com.zhihu.android:matisse:0.5.2-beta5',
+        //废弃
+        image_picker        : 'com.lzy.widget:imagepicker:0.6.1',
+        photo_selector      : 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.1',
+        photo_view          :  'com.github.chrisbanes:PhotoView:2.3.0',
+
+        kotlin              : 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.61',
+
+        //生成二维码
+        zxing               : 'com.google.zxing:core:3.4.0',
+        lottie              : 'com.airbnb.android:lottie:3.4.0'
+
+]
+
+def project = [
+        // 业务层
+        module  : [
+                chat    : includeProject(":module-chat"),
+                found   : includeProject(":module-found"),
+                login   : includeProject(":module-login"),
+                splash  : includeProject(":module-splash"),
+                share   : includeProject(":module-share")
+
+        ],
+
+        // 组件层
+        lib     : [
+                common : includeProject(":lib-common"),
+                chat   : includeProject(":lib-neuqer_chat"),
+                data   : includeProject(":lib-data")
+
+        ],
+
+        // 基础层
+        base    : [
+                event   : includeProject(":event"),
+                base    : includeProject(":base"),
+                network : includeProject(":network")
+        ],
+
+        // 架构层
+        framework   : [
+                arouter         : includeProject(":fw-arouter"),
+                annotations     : includeProject(":fw-annotations"),
+                annotations_compiler : includeProject(":fw-annotations-compiler")
+        ]
+
+]
+
+def processor = [
+        annotation_auto_service_apt : 'com.google.auto.service:auto-service:1.0-rc4'
+]
+
+def debug = [
+        junit           : 'junit:junit:4.12',
+        androidx_junit  : 'androidx.test.ext:junit:1.1.1',
+        espresso        : 'androidx.test.espresso:espresso-core:3.2.0'
+]
+
+deps.android = android
+deps.androidx = androidx
+deps.tools = tools
+deps.project = project
+deps.processor = processor
+deps.debug = debug
+
+def includeProject(def projectPath) {
+    include projectPath
+    return project(projectPath)
+}
+
+gradle.ext.deps = deps
+include ':module-share'

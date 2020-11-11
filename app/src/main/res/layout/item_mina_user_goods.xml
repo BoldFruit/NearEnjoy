@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:context="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_mine_white_round_3dp"
+        android:paddingBottom="2dp"
+        android:layout_marginTop="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingTop="@dimen/p2"
+            android:paddingEnd="@dimen/p1"
+            android:paddingBottom="@dimen/p1">
+
+            <com.example.lib_common.widget.imageview.CircleImageView
+                android:id="@+id/img_goods"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="centerCrop"
+                context:src="@drawable/ic_mine_goods_placeholder"
+                app:radius="@dimen/p2"
+                app:civ_border_overlay="true"
+                app:civ_border_width="2dp"
+                app:civ_circle_background_color="@android:color/black"
+                app:civ_border_color="@android:color/black"
+                android:background="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/txt_goods_name"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignTop="@id/img_goods"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@id/img_goods"
+                context:text="一套商品"
+                android:gravity="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:maxEms="46"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/img_goods"
+                >
+
+                <TextView
+                    android:id="@+id/txt_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥ 50"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FF001F"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <com.example.lib_common.widget.flowlayout.TagFlowLayout
+                    android:id="@+id/tlayout_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llayout_user_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_goods"
+                android:layout_marginBottom="2dp"
+                android:layout_toEndOf="@id/img_goods"
+                android:background="@android:color/white"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_avatar"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/p1"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="253dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxEms="18"
+                    android:singleLine="true"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="12sp"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/txt_number_love"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="#4A4A4A"
+                    android:textSize="12sp"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+            
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_mine_edit"
+                android:layout_alignTop="@id/img_goods"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/img_edit"
+             />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</layout>

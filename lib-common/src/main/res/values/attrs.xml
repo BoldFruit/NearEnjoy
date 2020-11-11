@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="my_edit_text">
+
+        <attr name="passwordType" format="string"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="PatternEditText">
+        <attr name="pattern" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="GalleryView">
+        <attr name="animDuration" format="integer"/>
+        <attr name="saveText" format="string"/>
+        <attr name="saveTextSize" format="dimension"/>
+        <attr name="saveTextColor" format="color"/>
+    </declare-styleable>
+
+    <!--常用于做标签的一个layout的属性-->
+    <declare-styleable name="TagFlowLayout">
+        <attr name="max_select" format="integer"></attr>
+        <attr name="tag_gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!--CircleImageView的自定义参数-->
+    <declare-styleable name="Custom_Round_Image_View">
+        <attr name="radius" format="dimension"/>
+        <attr name="left_top_radius" format="dimension"/>
+        <attr name="right_top_radius" format="dimension"/>
+        <attr name="right_bottom_radius" format="dimension"/>
+        <attr name="left_bottom_radius" format="dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="RelativeButton">
+        <attr name="normal_btn" format="reference|color"/>
+        <attr name="enable_btn" format="reference|color"/>
+        <attr name="normal_txt" format="reference|color"/>
+        <attr name="enable_txt" format="reference|color"/>
+        <attr name="center_txt" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="GradientTabStrip">
+        <attr name="gtsTextSize" format="dimension" />
+        <attr name="gtsTextColor" format="color" />
+        <attr name="gtsDrawablePadding" format="dimension" />
+        <attr name="gtsDrawableWidth" format="dimension" />
+        <attr name="gtsDrawableHeight" format="dimension" />
+        <attr name="gtsBackground" format="reference" />
+        <attr name="gtsInterval" format="reference" />
+        <attr name="gtsMinItemWidth" format="dimension" />
+        <attr name="gtsTagTextSize" format="dimension" />
+        <attr name="gtsTagTextColor" format="color" />
+        <attr name="gtsTagBackground" format="reference" />
+        <attr name="gtsTagPadding" format="dimension" />
+        <attr name="gtsTagPaddingLeft" format="dimension" />
+        <attr name="gtsTagPaddingTop" format="dimension" />
+        <attr name="gtsTagPaddingRight" format="dimension" />
+        <attr name="gtsTagPaddingBottom" format="dimension" />
+        <attr name="gtsTagMargin" format="dimension" />
+        <attr name="gtsTagMarginLeft" format="dimension" />
+        <attr name="gtsTagMarginTop" format="dimension" />
+        <attr name="gtsTagMarginRight" format="dimension" />
+        <attr name="gtsTagMarginBottom" format="dimension" />
+        <attr name="gtsTagMinSizeMode" format="enum">
+            <enum name="OnlyHasText" value="0" />
+            <enum name="Always" value="1" />
+        </attr>
+        <attr name="gtsTagMinWidth" format="dimension" />
+        <attr name="gtsTagMinHeight" format="dimension" />
+        <attr name="gtsCenterGap" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ResizableImageView">
+        <attr name="max_resize_width" format="dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="EasyArcView">
+        <attr name="arc_radius" format="integer"/>
+        <attr name="arc_position">
+            <enum name="up" value="0"/>
+            <enum name="down" value="1"/>
+        </attr>
+        <attr name="start_color" format="color"/>
+        <attr name="end_color" format="color"/>
+        <attr name="arc_radius_real" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="EasyRoundView">
+        <attr name="circle_radius" format="dimension"/>
+        <attr name="circle_center_x" format="dimension" />
+        <attr name="circle_center_y" format="dimension"/>
+        <attr name="round_start_color" format="color"/>
+        <attr name="round_end_color" format="color"/>
+        <attr name="background_color" format="color"/>
+        <attr name="circle_center_position">
+            <flag name="CENTER" value="1"/>
+            <flag name="LEFT_TOP" value="2"/>
+            <flag name="LEFT_BOTTOM" value="3"/>
+            <flag name="RIGHT_TOP" value="4"/>
+            <flag name="RIGHT_BOTTOM" value="5"/>
+            <flag name="CENTER_BOTTOM" value="6"/>
+            <flag name="CENTER_TOP" value="7"/>
+            <flag name="NONE" value="0"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CheckPoint">
+        <attr name="cp_checked_color" format="color"/>
+        <attr name="cp_normal_color" format="color"/>
+        <attr name="cp_edge_color" format="color"/>
+        <attr name="cp_background_color" format="color"/>
+        <attr name="cp_tag" format="string|reference"/>
+        <attr name="cp_txt" format="string|reference"/>
+        <attr name="cp_is_cancelable" format="boolean"/>
+        <attr name="cp_is_checked" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="SingleCheckPoint">
+        <attr name="scp_checked_color" format="color"/>
+        <attr name="scp_normal_color" format="color"/>
+        <attr name="scp_edge_color" format="color"/>
+        <attr name="scp_background_color" format="color"/>
+        <attr name="scp_tag" format="string|reference"/>
+        <attr name="scp_txt" format="string|reference"/>
+        <attr name="scp_is_cancelable" format="boolean"/>
+        <attr name="scp_is_checked" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="WaveView">
+        <attr name="waveWaterLevel" format="float" />
+        <attr name="amplitudeRatio" format="float" />
+        <attr name="waveLengthRatio" format="float" />
+        <attr name="waveShiftRatio" format="float" />
+        <attr name="frontWaveColor" format="color" />
+        <attr name="behindWaveColor" format="color" />
+        <attr name="waveShape" format="enum">
+            <enum name="circle" value="0" />
+            <enum name="square" value="1" />
+        </attr>
+        <attr name="showWave" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="Banner">
+        <attr name="delay_time" format="integer" />
+        <attr name="is_auto_loop" format="boolean" />
+
+        <attr name="indicator_normal_width" format="dimension"/>
+        <attr name="indicator_selected_width" format="dimension"/>
+        <attr name="indicator_normal_color" format="reference|color"/>
+        <attr name="indicator_selected_color" format="reference|color"/>
+        <attr name="indicator_space" format="dimension"/>
+        <attr name="indicator_margin" format="dimension"/>
+        <attr name="indicator_marginLeft" format="dimension"/>
+        <attr name="indicator_marginTop" format="dimension"/>
+        <attr name="indicator_marginRight" format="dimension"/>
+        <attr name="indicator_marginBottom" format="dimension"/>
+        <attr name="indicator_gravity" format="enum">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+
+        <attr name="orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+
+    </declare-styleable>
+</resources>

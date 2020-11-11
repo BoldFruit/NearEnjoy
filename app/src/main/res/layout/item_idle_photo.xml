@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/gray_alpha_48">
+
+        <com.luck.picture.lib.widget.SquareRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_idle_add"
+                android:id="@+id/img"
+                />
+
+            <ImageView
+                android:id="@+id/img_delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/img"
+                android:layout_alignEnd="@id/img"
+                android:paddingStart="10dp"
+                android:paddingBottom="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_idle_delete"
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:ignore="RtlSymmetry" />
+        </com.luck.picture.lib.widget.SquareRelativeLayout>
+    </androidx.cardview.widget.CardView>

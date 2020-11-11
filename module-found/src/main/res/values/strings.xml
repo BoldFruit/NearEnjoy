@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">module-found</string>
+
+    <string name="search_hint">统计学原理</string>
+    <string name="txt_search">搜索</string>
+    <string name="search_history">历史搜索</string>
+    <string name="txt_change_searchway">切换搜索方式</string>
+    <string name="txt_search_user">搜索用户</string>
+    <string name="txt_search_goods">搜索商品</string>
+    <string name="txt_hot_search">热门搜索</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit_goods_hint">统计学原理</string>
+    <string name="test_goods_name">ROSE全新化妆品</string>
+    <string name="test_price">￥ 50</string>
+    <string name="test_name">Jinxiang</string>
+    <string name="test_number_love">5 想要</string>
+    <string name="edit_users_hint">小橡果</string>
+    <string name="txt_comprehensive">综合</string>
+    <string name="txt_select">筛选</string>
+    <string name="sort_item_comprehensive">综合排序</string>
+    <string name="txt_sort_up">价格从低到高</string>
+    <string name="txt_sort_down">价格从高到低</string>
+    <string name="txt_sort_publication">最新发布</string>
+    <string name="txt_label">标签</string>
+    <string name="txt_price">价格</string>
+    <string name="txt_lowest_price">最低价</string>
+    <string name="txt_highest_price">最高价</string>
+    <string name="btn_reset">重置</string>
+    <string name="btn_determine">确定</string>
+    <string name="txt_to_bottom">到底了!</string>
+    <string name="load_faild">加载失败</string>
+    <string name="btn_retry">重新加载</string>
+    <string name="txt_no_search_result">没有搜索结果</string>
+
+    <string name="found_txt_price_number">￥ %.2f</string>
+    <string name="found_txt_want_number">%d 想要</string>
+</resources>
