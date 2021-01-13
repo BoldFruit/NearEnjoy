@@ -6,6 +6,10 @@ import androidx.paging.toLiveData
 import com.example.found.model.bean.SearchGoodsResponse
 import com.example.found.paging.Listing
 import com.example.found.paging.factory.GoodsDataSourceFactory
+import io.reactivex.Observable
+import io.reactivex.Observer
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.disposables.Disposable
 import java.util.concurrent.Executor
 
 /**
@@ -41,4 +45,5 @@ class GoodsRepository(private val networkExecutor: Executor) {
                 }
         )
     }
+
 }
